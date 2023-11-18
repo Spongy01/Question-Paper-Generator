@@ -9,7 +9,7 @@ const path = require("node:path")
 const baseDir = __dirname
 
 /**
- * The name of the folder where data is stored.
+ * The name of the folder where data is stored directly with baseDir.
  * Change this if the data folder's name is different.
  * @constant {string}
  */
