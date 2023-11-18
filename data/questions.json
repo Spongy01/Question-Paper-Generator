@@ -1,0 +1,1494 @@
+[
+  {
+  "question": "What is the capital of France?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Who wrote the play 'Hamlet'?",
+  "subject": "Literature",
+  "topic": "Drama",
+  "difficulty": "Medium",
+  "marks": 10
+  },
+  {
+  "question": "What is the formula for calculating the area of a circle?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Hard",
+  "marks": 8
+  },
+  {
+  "question": "What is the process of photosynthesis?",
+  "subject": "Biology",
+  "topic": "Cellular Processes",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who painted the Mona Lisa?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the Pythagorean theorem?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Hard",
+  "marks": 10
+  },
+  {
+  "question": "What is the capital of Japan?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the significance of the Magna Carta?",
+  "subject": "History",
+  "topic": "Medieval Europe",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who wrote 'To Kill a Mockingbird'?",
+  "subject": "Literature",
+  "topic": "American Novels",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "What is the process of photosynthesis?",
+  "subject": "Biology",
+  "topic": "Cellular Processes",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who painted the Mona Lisa?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the Pythagorean theorem?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Hard",
+  "marks": 10
+  },
+  {
+  "question": "What is the capital of Japan?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the significance of the Magna Carta?",
+  "subject": "History",
+  "topic": "Medieval Europe",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who wrote 'To Kill a Mockingbird'?",
+  "subject": "Literature",
+  "topic": "American Novels",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "What is the capital of Australia?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Define Newton's First Law of Motion.",
+  "subject": "Physics",
+  "topic": "Mechanics",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who discovered penicillin?",
+  "subject": "Biology",
+  "topic": "Medical Science",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Solve the equation: x² + 4x + 4 = 0.",
+  "subject": "Mathematics",
+  "topic": "Algebra",
+  "difficulty": "Hard",
+  "marks": 10
+  },
+  {
+  "question": "Name the largest planet in our solar system.",
+  "subject": "Astronomy",
+  "topic": "Planets",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What are the main stages of the water cycle?",
+  "subject": "Geography",
+  "topic": "Hydrology",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who was the first female Prime Minister of the UK?",
+  "subject": "History",
+  "topic": "World Leaders",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who composed the famous 'Moonlight Sonata'?",
+  "subject": "Music",
+  "topic": "Classical Music",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "Name the largest desert in the world.",
+  "subject": "Geography",
+  "topic": "Geographical Landforms",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical symbol for gold?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the literary term for a play on words?",
+  "subject": "Literature",
+  "topic": "Literary Devices",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who developed the theory of relativity?",
+  "subject": "Physics",
+  "topic": "Quantum Physics",
+  "difficulty": "Hard",
+  "marks": 9
+  },
+  {
+  "question": "What is the main function of the mitochondria?",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Define the term 'Photosynthesis'.",
+  "subject": "Biology",
+  "topic": "Cellular Processes",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "What is the capital of France?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "Who painted the Mona Lisa?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "What is 2 + 2?",
+  "subject": "Mathematics",
+  "topic": "Basic Arithmetic",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the largest ocean in the world?",
+  "subject": "Geography",
+  "topic": "Oceans",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "Who wrote 'To Kill a Mockingbird'?",
+  "subject": "Literature",
+  "topic": "American Novels",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical symbol for sodium?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "What is the main function of the heart?",
+  "subject": "Biology",
+  "topic": "Human Anatomy",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "Who is the current president of the United States?",
+  "subject": "Politics",
+  "topic": "World Leaders",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the square root of 16?",
+  "subject": "Mathematics",
+  "topic": "Basic Algebra",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Name the largest continent on Earth.",
+  "subject": "Geography",
+  "topic": "Continents",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "What year did World War I begin?",
+  "subject": "History",
+  "topic": "World Wars",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "Who discovered penicillin?",
+  "subject": "Biology",
+  "topic": "Medical Science",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "What is the capital of Japan?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the formula for the area of a rectangle?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "Who wrote 'Romeo and Juliet'?",
+  "subject": "Literature",
+  "topic": "Shakespearean Plays",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "What is the chemical symbol for oxygen?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "What is the process of photosynthesis?",
+  "subject": "Biology",
+  "topic": "Cellular Processes",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Who painted 'Starry Night'?",
+  "subject": "Art History",
+  "topic": "Impressionism",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "What is the value of pi (π)?",
+  "subject": "Mathematics",
+  "topic": "Mathematical Constants",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the longest river in the world?",
+  "subject": "Geography",
+  "topic": "Rivers",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "Who was the first person to step on the Moon?",
+  "subject": "Space Exploration",
+  "topic": "Astronauts",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical symbol for gold?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "What is the function of the ribosomes in a cell?",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+
+  {
+  "question": "What is the capital of France?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "Who painted the Mona Lisa?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is 2 + 2?",
+  "subject": "Mathematics",
+  "topic": "Basic Arithmetic",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the capital of Japan?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "Who is the current president of the United States?",
+  "subject": "Politics",
+  "topic": "World Leaders",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "Name the largest continent on Earth.",
+  "subject": "Geography",
+  "topic": "Continents",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "Who discovered penicillin?",
+  "subject": "Biology",
+  "topic": "Medical Science",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the chemical symbol for sodium?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the main function of the heart?",
+  "subject": "Biology",
+  "topic": "Human Anatomy",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "Who wrote 'To Kill a Mockingbird'?",
+  "subject": "Literature",
+  "topic": "American Novels",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What year did World War I begin?",
+  "subject": "History",
+  "topic": "World Wars",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the formula for the area of a circle?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "Who composed the famous 'Moonlight Sonata'?",
+  "subject": "Music",
+  "topic": "Classical Music",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+  {
+  "question": "What is the chemical symbol for oxygen?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 1
+  },
+
+  {
+  "question": "Define Newton's Second Law of Motion.",
+  "subject": "Physics",
+  "topic": "Mechanics",
+  "difficulty": "Medium",
+  "marks": 1
+  },
+  {
+  "question": "What is the formula for calculating the area of a trapezoid?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Medium",
+  "marks": 1
+  },
+  {
+  "question": "Who proposed the theory of general relativity?",
+  "subject": "Physics",
+  "topic": "Quantum Physics",
+  "difficulty": "Hard",
+  "marks": 1
+  },
+  {
+  "question": "What is the chemical symbol for mercury?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 1
+  },
+  {
+  "question": "What is the powerhouse of the cell?",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "difficulty": "Medium",
+  "marks": 1
+  },
+  {
+  "question": "Name the largest moon of Jupiter.",
+  "subject": "Astronomy",
+  "topic": "Planets and Moons",
+  "difficulty": "Hard",
+  "marks": 1
+  },
+  {
+  "question": "Who discovered the double helix structure of DNA?",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "difficulty": "Hard",
+  "marks": 1
+  },
+
+
+  {
+  "question": "What is the formula for the area of a rectangle?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "Who painted the 'Starry Night'?",
+  "subject": "Art History",
+  "topic": "Impressionism",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "What is the chemical symbol for gold?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "What is the main function of the mitochondria?",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "Name the largest desert in the world.",
+  "subject": "Geography",
+  "topic": "Geographical Landforms",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "Who wrote 'Romeo and Juliet'?",
+  "subject": "Literature",
+  "topic": "Shakespearean Plays",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "What is the chemical formula for water?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Easy",
+  "marks": 2
+  },
+  {
+  "question": "What is the capital of Brazil?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 3
+  },
+  {
+  "question": "What is the formula for calculating the circumference of a circle?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Who discovered gravity?",
+  "subject": "Physics",
+  "topic": "Scientific Discoveries",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "What is the primary gas responsible for the greenhouse effect?",
+  "subject": "Environmental Science",
+  "topic": "Atmospheric Science",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "Who is known as the 'Father of Modern Physics'?",
+  "subject": "Physics",
+  "topic": "Famous Physicists",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "What is the chemical symbol for silver?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "What is the largest organ in the human body?",
+  "subject": "Biology",
+  "topic": "Human Anatomy",
+  "difficulty": "Medium",
+  "marks": 2
+  },
+  {
+  "question": "What is the boiling point of water in Celsius?",
+  "subject": "Chemistry",
+  "topic": "Physical Properties",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Who founded Microsoft?",
+  "subject": "Technology",
+  "topic": "Software Companies",
+  "difficulty": "Medium",
+  "marks": 2
+  },
+  {
+  "question": "What is the unit of electric current?",
+  "subject": "Physics",
+  "topic": "Electricity",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Name the author of '1984'.",
+  "subject": "Literature",
+  "topic": "Dystopian Novels",
+  "difficulty": "Medium",
+  "marks": 2
+  },
+  {
+  "question": "What is the capital of South Africa?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "What is the value of π (pi) rounded to two decimal places?",
+  "subject": "Mathematics",
+  "topic": "Mathematical Constants",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Who formulated the theory of evolution?",
+  "subject": "Biology",
+  "topic": "Evolutionary Biology",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "What is the formula for the surface area of a sphere?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Who is credited with the discovery of the electron?",
+  "subject": "Physics",
+  "topic": "Particle Physics",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "What is the chemical formula for ozone?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Medium",
+  "marks": 2
+  },
+  {
+  "question": "Who painted the 'Birth of Venus'?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "What is the largest moon in the solar system?",
+  "subject": "Astronomy",
+  "topic": "Planets and Moons",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "Name the process by which plants make their own food.",
+  "subject": "Biology",
+  "topic": "Photosynthesis",
+  "difficulty": "Medium",
+  "marks": 2
+  },
+  {
+  "question": "What is the main component of the Earth's atmosphere?",
+  "subject": "Geography",
+  "topic": "Atmospheric Science",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Who invented the telephone?",
+  "subject": "Technology",
+  "topic": "Inventions",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "What is the atomic number of hydrogen?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Who is known as the 'father of modern chemistry'?",
+  "subject": "Chemistry",
+  "topic": "Scientific Pioneers",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "What is the capital of Mongolia?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Medium",
+  "marks": 2
+  },
+  {
+  "question": "Who wrote the play 'Hamlet'?",
+  "subject": "Literature",
+  "topic": "Drama",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "What is the largest organ in the human body?",
+  "subject": "Biology",
+  "topic": "Human Anatomy",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "Name the scientist who proposed the theory of general relativity.",
+  "subject": "Physics",
+  "topic": "Quantum Physics",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical symbol for tungsten?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 2
+  },
+  {
+  "question": "Define the term 'biome'.",
+  "subject": "Biology",
+  "topic": "Ecology",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+  {
+  "question": "Who discovered the theory of special relativity?",
+  "subject": "Physics",
+  "topic": "Quantum Physics",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "What is the formula for calculating kinetic energy?",
+  "subject": "Physics",
+  "topic": "Energy",
+  "difficulty": "Medium",
+  "marks": 3
+  },
+
+  {
+  "question": "What is the formula for finding the area of a triangle?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "Who wrote the play 'Macbeth'?",
+  "subject": "Literature",
+  "topic": "Drama",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "What is the capital of Canada?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Who discovered penicillin?",
+  "subject": "Biology",
+  "topic": "Medical Science",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical formula for water?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "Name the largest ocean in the world.",
+  "subject": "Geography",
+  "topic": "Oceans",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "What is the chemical symbol for sodium?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "What is the largest planet in our solar system?",
+  "subject": "Astronomy",
+  "topic": "Planets",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "Who painted the 'Mona Lisa'?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the primary function of the ribosomes in a cell?",
+  "subject": "Biology",
+  "topic": "Cell Biology",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Who is the current Prime Minister of the UK?",
+  "subject": "Politics",
+  "topic": "World Leaders",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "What is the chemical symbol for gold?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "Who is known as the 'Father of Modern Physics'?",
+  "subject": "Physics",
+  "topic": "Famous Physicists",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "What is the capital of Australia?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "What is the main function of the lungs in the human body?",
+  "subject": "Biology",
+  "topic": "Human Anatomy",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "Who is the author of 'Pride and Prejudice'?",
+  "subject": "Literature",
+  "topic": "Classic Novels",
+  "difficulty": "Easy",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical symbol for silver?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "What is the largest desert in the world?",
+  "subject": "Geography",
+  "topic": "Geographical Landforms",
+  "difficulty": "Easy",
+  "marks": 6
+  },
+  {
+  "question": "Who painted 'The Starry Night'?",
+  "subject": "Art History",
+  "topic": "Impressionism",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+  {
+  "question": "What is the chemical formula for methane?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Easy",
+  "marks": 4
+  },
+
+  {
+  "question": "What is the formula for calculating the area of a circle?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "Who discovered the theory of general relativity?",
+  "subject": "Physics",
+  "topic": "Quantum Physics",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "What is the largest moon of Saturn?",
+  "subject": "Astronomy",
+  "topic": "Planets and Moons",
+  "difficulty": "Medium",
+  "marks": 5
+  },
+  {
+  "question": "Name the scientist who proposed the double-helix structure of DNA.",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "difficulty": "Medium",
+  "marks": 5
+  },
+  {
+  "question": "Who is the author of 'The Great Gatsby'?",
+  "subject": "Literature",
+  "topic": "American Novels",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "What is the capital of Brazil?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "Who developed the theory of electromagnetism?",
+  "subject": "Physics",
+  "topic": "Electromagnetism",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "What is the chemical symbol for iron?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "Name the largest river in the world by discharge.",
+  "subject": "Geography",
+  "topic": "Rivers",
+  "difficulty": "Medium",
+  "marks": 5
+  },
+  {
+  "question": "Who painted the 'Mona Lisa'?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Medium",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical formula for water?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "Who is the current Prime Minister of Japan?",
+  "subject": "Politics",
+  "topic": "World Leaders",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "What is the chemical symbol for gold?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "Who composed the famous 'Fifth Symphony'?",
+  "subject": "Music",
+  "topic": "Classical Music",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "What is the capital of Australia?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Medium",
+  "marks": 5
+  },
+  {
+  "question": "Who discovered the laws of planetary motion?",
+  "subject": "Astronomy",
+  "topic": "Celestial Mechanics",
+  "difficulty": "Medium",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical formula for methane?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "Who is known as the 'Father of Genetics'?",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "difficulty": "Medium",
+  "marks": 6
+  },
+  {
+  "question": "Name the longest river in Europe.",
+  "subject": "Geography",
+  "topic": "Rivers",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+  {
+  "question": "Who created the periodic table?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 4
+  },
+
+  {
+  "question": "What is the derivative of sin(x)?",
+  "subject": "Mathematics",
+  "topic": "Calculus",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "Who formulated the theory of special relativity?",
+  "subject": "Physics",
+  "topic": "Quantum Physics",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "What is the largest moon of Jupiter?",
+  "subject": "Astronomy",
+  "topic": "Planets and Moons",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "Name the scientist who proposed the double-helix structure of DNA.",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "Who wrote the novel 'Moby Dick'?",
+  "subject": "Literature",
+  "topic": "Classic Novels",
+  "difficulty": "Hard",
+  "marks": 6
+  },
+  {
+  "question": "What is the capital of Brazil?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Hard",
+  "marks": 6
+  },
+  {
+  "question": "Who discovered the laws of electromagnetism?",
+  "subject": "Physics",
+  "topic": "Electromagnetism",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "What is the chemical symbol for iron?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "Name the longest river in the world.",
+  "subject": "Geography",
+  "topic": "Rivers",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "Who painted the 'Mona Lisa'?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical formula for water?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Hard",
+  "marks": 6
+  },
+  {
+  "question": "Who is the current Prime Minister of Japan?",
+  "subject": "Politics",
+  "topic": "World Leaders",
+  "difficulty": "Hard",
+  "marks": 6
+  },
+  {
+  "question": "What is the chemical symbol for gold?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "Who composed the famous 'Fifth Symphony'?",
+  "subject": "Music",
+  "topic": "Classical Music",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "What is the capital of Australia?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "Who discovered the laws of planetary motion?",
+  "subject": "Astronomy",
+  "topic": "Celestial Mechanics",
+  "difficulty": "Hard",
+  "marks": 5
+  },
+  {
+  "question": "What is the chemical formula for methane?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Hard",
+  "marks": 6
+  },
+  {
+  "question": "Who is known as the 'Father of Genetics'?",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "difficulty": "Hard",
+  "marks": 6
+  },
+  {
+  "question": "Name the longest river in Europe.",
+  "subject": "Geography",
+  "topic": "Rivers",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+  {
+  "question": "Who created the periodic table?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Hard",
+  "marks": 4
+  },
+
+  {
+  "question": "What is the capital of France?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Easy",
+  "marks": 7
+  },
+  {
+  "question": "Who painted the 'Starry Night'?",
+  "subject": "Art History",
+  "topic": "Post-Impressionism",
+  "difficulty": "Easy",
+  "marks": 7
+  },
+  {
+  "question": "What is the chemical symbol for potassium?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 8
+  },
+  {
+  "question": "What is the main function of the liver?",
+  "subject": "Biology",
+  "topic": "Human Anatomy",
+  "difficulty": "Easy",
+  "marks": 8
+  },
+  {
+  "question": "Who is the author of 'To Kill a Mockingbird'?",
+  "subject": "Literature",
+  "topic": "Classic Novels",
+  "difficulty": "Easy",
+  "marks": 9
+  },
+  {
+  "question": "What is the largest continent by land area?",
+  "subject": "Geography",
+  "topic": "Continents",
+  "difficulty": "Easy",
+  "marks": 9
+  },
+  {
+  "question": "What is the chemical symbol for silver?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Easy",
+  "marks": 10
+  },
+  {
+  "question": "Who composed 'The Four Seasons'?",
+  "subject": "Music",
+  "topic": "Classical Music",
+  "difficulty": "Easy",
+  "marks": 10
+  },
+  {
+  "question": "What is the currency of Japan?",
+  "subject": "Economics",
+  "topic": "Currencies",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who discovered radium and polonium?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "What is the primary function of the cerebrum?",
+  "subject": "Biology",
+  "topic": "Human Anatomy",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who wrote the play 'Hamlet'?",
+  "subject": "Literature",
+  "topic": "Drama",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "What is the chemical formula for ammonia?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "Who invented the light bulb?",
+  "subject": "Physics",
+  "topic": "Inventions",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "What is the capital of Australia?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Medium",
+  "marks": 10
+  },
+  {
+  "question": "Who composed 'The Magic Flute'?",
+  "subject": "Music",
+  "topic": "Classical Music",
+  "difficulty": "Medium",
+  "marks": 10
+  },
+  {
+  "question": "What is the largest ocean in the world?",
+  "subject": "Geography",
+  "topic": "Oceans",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who discovered penicillin?",
+  "subject": "Biology",
+  "topic": "Medical Science",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "What is the chemical symbol for chromium?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who wrote the novel 'War and Peace'?",
+  "subject": "Literature",
+  "topic": "Classic Novels",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "What is the formula for calculating the volume of a cylinder?",
+  "subject": "Mathematics",
+  "topic": "Geometry",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who proposed the theory of relativity?",
+  "subject": "Physics",
+  "topic": "Quantum Physics",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "What is the largest moon of Saturn?",
+  "subject": "Astronomy",
+  "topic": "Planets and Moons",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Name the scientist who discovered the laws of genetics.",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who authored the novel 'Crime and Punishment'?",
+  "subject": "Literature",
+  "topic": "Classic Novels",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "What is the capital of Brazil?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "Who formulated the laws of thermodynamics?",
+  "subject": "Physics",
+  "topic": "Thermodynamics",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "What is the chemical symbol for iodine?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Name the longest river in Asia.",
+  "subject": "Geography",
+  "topic": "Rivers",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who painted the 'Last Supper'?",
+  "subject": "Art History",
+  "topic": "Renaissance Art",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "What is the chemical formula for sulfuric acid?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "Who is the current Chancellor of Germany?",
+  "subject": "Politics",
+  "topic": "World Leaders",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "What is the chemical symbol for gold?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who composed the 'Moonlight Sonata'?",
+  "subject": "Music",
+  "topic": "Classical Music",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "What is the capital of Australia?",
+  "subject": "Geography",
+  "topic": "World Capitals",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "Who discovered the laws of planetary motion?",
+  "subject": "Astronomy",
+  "topic": "Celestial Mechanics",
+  "difficulty": "Medium",
+  "marks": 8
+  },
+  {
+  "question": "What is the chemical formula for methane?",
+  "subject": "Chemistry",
+  "topic": "Compounds",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "Who is known as the 'Father of Genetics'?",
+  "subject": "Biology",
+  "topic": "Genetics",
+  "difficulty": "Medium",
+  "marks": 9
+  },
+  {
+  "question": "Name the longest river in Europe.",
+  "subject": "Geography",
+  "topic": "Rivers",
+  "difficulty": "Medium",
+  "marks": 7
+  },
+  {
+  "question": "Who created the periodic table?",
+  "subject": "Chemistry",
+  "topic": "Elements",
+  "difficulty": "Medium",
+  "marks": 7
+  }
+]
