@@ -8,7 +8,7 @@ const QuestionManager = require("./questionManager");
  * @param {number} marks Total marks requirement to select questions
  * @returns {Object} Returns an object containing information about whether such a combination can be made and the combination array
  */
-function makePaper(questions,len,marks){
+function makeQuestions(questions,len,marks){
   //base case
   if (marks == 0){
       return {isPossible: true, subset : []}
@@ -19,14 +19,14 @@ function makePaper(questions,len,marks){
 
   // if cant add last element, directy ignore it
   if (questions[len-1].marks > marks) {
-      return makePaper(questions,len-1,marks);
+      return makeQuestions(questions,len-1,marks);
   }
 
-  let include = makePaper(questions, len - 1, marks - questions[len - 1].marks);
+  let include = makeQuestions(questions, len - 1, marks - questions[len - 1].marks);
   if (include.isPossible) {
       return { isPossible: true, subset: include.subset.concat(questions[len - 1]) };
   } else {
-      return makePaper(questions,len-1,marks);
+      return makeQuestions(questions,len-1,marks);
   }
 }
 
@@ -61,11 +61,13 @@ function generateQuestionPaper(questionStore, requirements){
         const marksForFraction = totalMarks * (fraction/100) // absolute marks for a particular difficulty
         let fractionQuestions =  questionManager.getQuestionsByDifficulty(diff) // extract questions 
     
-        let fractionPaper = makePaper(fractionQuestions, fractionQuestions.length, marksForFraction)
+        let fractionPaper = makeQuestions(fractionQuestions, fractionQuestions.length, marksForFraction)
         
         if (fractionPaper.isPossible == false) {
           isPossible = false
+          questionPaper = null
           break
+          
         }
 
         fractionQuestions = fractionPaper.subset
@@ -82,4 +84,5 @@ function generateQuestionPaper(questionStore, requirements){
 }
 
 
-module.exports = generateQuestionPaper
+module.exports.generateQuestionPaper = generateQuestionPaper
+module.exports.makeQuestions = makeQuestions
