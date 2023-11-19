@@ -41,17 +41,25 @@ const dataDir = path.join(baseDir, dataFolder)
 /**
  * Constants holding codes for data reading.
  * @readonly
- * @enum {number}
+ * @type {Object}
+ * @property {number} NO_DATA_READ - Indicates no data was read.
+ * @property {number} PARTIAL_DATA_READ - Indicates partial data was read.
+ * @property {number} FULL_DATA_READ - Indicates full data was read.
  */
 const DataReadCodes = {
-    /** No data read. */
     NO_DATA_READ: 0,
-    /** Partial data read. */
     PARTIAL_DATA_READ: 1,
-    /** Full data read. */
     FULL_DATA_READ: 2,
 };
 
+/**
+ * Constants holding codes for data reading.
+ * @readonly
+ * @type {Object}
+ * @property {number} SUCCESS - Indicates a successful operation.
+ * @property {number} ERROR - Indicates an error during the operation.
+ * @property {number} TERMINATE - Indicates termination or cancellation of the operation.
+ */
 const ResponseCodes = {
     SUCCESS : 0,
     ERROR : 1,
