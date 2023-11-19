@@ -54,4 +54,42 @@ describe('tests related to input requirements validation', () =>{
         let val = validateRequirements(requirements)
         expect(val).toBe(utils.ResponseCodes.ERROR)
     })
+
+
+    test("returns error code on faulty input requirements: marks not given in criteria ", ()=>{
+        requirements = {
+            criteria : {
+              difficulty : { 
+                Easy: 40,  // marks for easy diff = 3.6
+                Medium: 30, // marks for med diff = 2.7
+                Hard: 30,  // marks for hard diff = 2.7
+              }
+              // can add more criteria here 
+            }
+        }
+
+        let val = validateRequirements(requirements)
+        expect(val).toBe(utils.ResponseCodes.ERROR)
+    })
+
+    test("returns error code on faulty input requirements: criteria not given  ", ()=>{
+        requirements = {
+            marks : 9,
+        }
+
+        let val = validateRequirements(requirements)
+        expect(val).toBe(utils.ResponseCodes.ERROR)
+    })
+
+    test("returns error code on faulty input requirements: empty criteria given ", ()=>{
+        requirements = {
+            marks : 9,
+            criteria : {
+              // can add more criteria here 
+            }
+        }
+
+        let val = validateRequirements(requirements)
+        expect(val).toBe(utils.ResponseCodes.ERROR)
+    })
 })

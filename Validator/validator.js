@@ -7,11 +7,24 @@ const utils = require("../utils")
  * @returns {number} Returns a response code indicating the validation status.
  */
 function validateRequirements(requirements){
+    
+    if(requirements.marks == undefined){
+        console.error("The requirements object does not contain 'marks'")
+        return utils.ResponseCodes.ERROR
+    }
     totalMarks = requirements.marks
+
+    if(requirements.criteria == undefined || JSON.stringify(requirements.criteria) === '{}'){
+        console.error("The requirements object does not contain any criteria to make paper on")
+        return utils.ResponseCodes.ERROR
+    }
     requirementCriterias = requirements.criteria
+
+    criteriaFound = false
 
     for (criteria in requirementCriterias){
         if(criteria == 'difficulty'){
+            criteriaFound = true
             sumValidation = difficultyValidationHelper(requirementCriterias[criteria])
             if( sumValidation == false){
                 console.error("The fractions in Difficulty criteria don't add up to 100, which is NOT VALID.")
@@ -27,8 +40,12 @@ function validateRequirements(requirements){
         // ....
 
     }
-
-    return utils.ResponseCodes.SUCCESS
+    if( criteriaFound ){
+        return utils.ResponseCodes.SUCCESS
+    } else{
+        console.error("The requirements object does not contain any valid criteria to make paper on")
+        return utils.ResponseCodes.SUCCESS
+    }
 }
 
 /**
