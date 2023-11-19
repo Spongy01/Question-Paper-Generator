@@ -1,0 +1,13 @@
+
+{
+    "source": {
+      "include": ["./"],
+      "exclude": ["./tests", "./node_modules"]
+    },
+    "opts": {
+      "destination": "./docs",
+      "recurse": true,
+      "template": "node_modules/docdash"
+    }
+  }
+  

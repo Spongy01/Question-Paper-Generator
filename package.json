@@ -4,11 +4,13 @@
   "description": "A backend challenge as part of Reelo's evaluation for the backend internship role. This project creates a Question Paper Generator which takes as input the total number of marks and the distribution of difficulty and provides a question paper with that particular config.",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "generate-docs": "jsdoc -c ./jsdoc.config.json"
   },
   "author": "Ali Asgar Padaria",
   "license": "ISC",
   "dependencies": {
+    "docdash": "^2.0.2",
     "inquirer": "^8.0.0"
   },
   "devDependencies": {

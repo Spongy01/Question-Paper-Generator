@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>IO_Module/file_reader.js - Documentation</title>
+    <title>Validator/validator.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">IO_Module/file_reader.js</h1>
+    <h1 class="page-title">Validator/validator.js</h1>
     
 
     
@@ -45,72 +45,80 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const fs = require("node:fs")
-const path = require("node:path")
-const utils = require("../utils")
-
-console.log("------------------------------------------")
-console.log("Current Dir for File Reader Module: ",__dirname)
-console.log("Utils : ", utils)
-console.log("------------------------------------------")
+            <pre class="prettyprint source linenums"><code>const utils = require("../utils")
 
 
 /**
- * @description This function reads the question data from the files specified in 'data_locator.js'
- * @returns { number,Array } An object containing return code and question data. 
+ * Validates the requirements object for generating question papers.
+ * @param {Object} requirements - The object containing marks and criteria for generating the question paper.
+ * @returns {number} Returns a response code indicating the validation status.
  */
+function validateRequirements(requirements){
+    totalMarks = requirements.marks
+    requirementCriterias = requirements.criteria
 
-function read_questions(){
-
-    // Get the locations of data_locations.json file &lt;It holds the file names where data is available for fetching>
-    dataLocationsPath = path.join(utils.baseDir, utils.dataLocator)
-    totalQuestionData = []
-
-    // default condition : All Data read successfully.
-    responseCode = utils.DataReadCodes.FULL_DATA_READ
-
-    try{
-    
-        dataFilesRaw = fs.readFileSync(dataLocationsPath, "utf-8")
-        dataFilesUsable = JSON.parse(dataFilesRaw)
-        locations = dataFilesUsable["locations"]
-        
-        noOfFiles = locations.length
-        dataDir = utils.dataDir
-        console.log("Data Locator found ", noOfFiles, " files containing question data")
-
-        locations.forEach((element,index) => {
-            console.log("Reading File ", index+1, "/",noOfFiles, " | File : ", element)
-        
-            try{
-                filePath = path.join(dataDir, element) 
-                questionDataRaw = fs.readFileSync(filePath,"utf-8")
-                questionDataParsed = JSON.parse(questionDataRaw)
-
-                // merge all questions into a single array.
-                totalQuestionData = [...totalQuestionData, ...questionDataParsed]
-        
-            }catch(fileError){
-                console.error("Caught Error while Reading Data File : ", fileError);
-
-                // If any error during file reading of a particular file, convert responseCode to partial read condition. 
-                responseCode = utils.DataReadCodes.PARTIAL_DATA_READ
+    for (criteria in requirementCriterias){
+        if(criteria == 'difficulty'){
+            sumValidation = difficultyValidationHelper(requirementCriterias[criteria])
+            if( sumValidation == false){
+                console.error("The fractions in Difficulty criteria don't add up to 100, which is NOT VALID.")
+                return utils.ResponseCodes.ERROR
             }
-        });
+            fractionValidation = fractionValidationHelper(requirementCriterias[criteria], totalMarks)
+            if( fractionValidation == false){
+                console.error("The fractions in Difficulty lead to marks in decimal points, which is NOT VALID.")
+                return utils.ResponseCodes.ERROR
+            }
+        }
+        // can add more validations here
+        // ....
 
-    }catch (error){
-        // Will reach here if there is some error in reading the contents of data_locations.json file
-        console.error("Caught Error while Reading Data Locator File : ", error);
-        // return with response code : No data read, and an empty array of questions
-        return {code: utils.DataReadCodes.NO_DATA_READ, data : totalQuestionData}
     }
 
-    return {code: responseCode, data : totalQuestionData}
+    return utils.ResponseCodes.SUCCESS
+}
 
+/**
+ * Helper function to validate the difficulty criteria in the requirements.
+ * @param {Object} difficulty the difficutly criteria object
+ * @returns {boolean} Returns true if the difficulty criteria is validated; otherwise, false.
+ */
+function difficultyValidationHelper(difficulty){
+    let sum =  0
+    for (const fraction in difficulty){
+      
+        sum += difficulty[fraction]
+    }
+    if(sum == 100){
+        return true
+    }
+    return false
+}
+
+/**
+ * Helper function to validate the fractions of the criteria against total marks.
+ * @param {Object} criteria - The criteria object.
+ * @param {number} marks - The total marks available.
+ * @returns {boolean} Returns true if the fractions are valid against total marks; otherwise, false.
+ */
+function fractionValidationHelper(criteria, marks){
+    isValid = true
+    for (const fraction in criteria){
+       
+        // this gives the fractional marks of a component in any criteria. Ex, 30% of 50 , fractionalMarks = 15        
+        fractionalMarks = (criteria[fraction]*marks)/100
+        if(! Number.isInteger(fractionalMarks)){ 
+            // if any component requires marks in fraction like 3.33, then the given requirement is not valid.
+            isValid = false
+            return isValid
+        }
+    }
+    return isValid
 }
 
 
-module.exports = read_questions</code></pre>
+
+module.exports.validateRequirements = validateRequirements</code></pre>
         </article>
     </section>
 
