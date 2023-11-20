@@ -1,3 +1,4 @@
+
 <h1 align="center">Welcome to Question Paper Generator 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
@@ -9,14 +10,10 @@
 
 > This project, part of Reelo's backend internship evaluation, creates a Question Paper Generator. It takes the total marks and difficulty distribution as input to generate a custom question paper.
 
-***
-***
 
-## Pre-reqs
+## Pre-requisite
 Node.js is required for this project.
 
-***
-***
 
 ## Install
 
@@ -27,8 +24,6 @@ $ npm install
 ```
 <br>
 
-***
-***
 ## Things To Know Before You Run:
 
 ### File Directory Structure
@@ -63,7 +58,7 @@ $ npm install
 ### Understanding the Main Structure
 
 #### `data/` :
-Default directory to store question data in `.json` files. Add multiple files and include them in data_locations.json to make them accessible. Update the default data folder from utils.js file's dataDir variable.
+Default directory to store question data in `.json` files. Add multiple files and include them in `data_locations.json` to make them accessible. Update the default data folder from `utils.js` file's `dataDir` variable.
 
 #### `IO_module/`, `Validator/`, `Generator/` :
 These folders contain the main logic of the application.
@@ -76,7 +71,7 @@ These folders contain the main logic of the application.
 
 
 #### `data_locations.json` :
-The File Reader Module fetches file names from this file to read questions from the data/ directory. Modify this file to include new files or exclude files you don't want to read.
+The File Reader Module fetches file names from this file to read questions from the `data/` directory. Modify this file to include new files or exclude files you don't want to read.
 ```javascript
 ---example---
 data_directory:
@@ -94,12 +89,12 @@ data_locations.json :
 // this gives user much freedom of selecting question stores 
 // when there are multiple question stores available 
 ```
-If you have another file which holds this data and you want to use that, you can update the utils.js dataLocator variable to the relative path of your file from the base directory. 
+If you have another file which holds this data and you want to use that, you can update the `utils.js` `dataLocator` variable to the relative path of your file from the base directory. 
 
 #### `app.js` 
 Starting point containing the driver code. Executed when you run the application.
 
-### The Most Important Thing : `utils.js` 
+#### `utils.js` 
 [Documentation for `utils.js`](https://spongy01.github.io/Question-Paper-Generator/module-Utils.html) <br>
 [`utils.js` raw code](https://github.com/Spongy01/Question-Paper-Generator/blob/main/utils.js)
 
@@ -107,9 +102,9 @@ Starting point containing the driver code. Executed when you run the application
 This file contains configurations related to various files. You can configure it before running the program to re-define the locations of important files and folders. Defaults are already set but update if you modify file structures.
 
 
-### The Second Most Important Thing : `Requirements Object`
+#### `Requirements Object`
 Two ways to generate a question paper: an interactive CLI or `questionRequirements.json` file. When reading from the file, it is important to note that the format of requirements should be as below:
-```json
+```javascript
  {
    marks : 10,
    criteria : {
@@ -122,14 +117,7 @@ Two ways to generate a question paper: an interactive CLI or `questionRequiremen
    }
  }
 ```
-If the `validator.js` cannot properly validate the requirements, it may result in inaccurate outcomes. The default file location for these requirements is set within `utils.js`, allowing you to update it if your requirements are stored in a different file.
-
-------------------
-Now you can go run this XD
-
-***
-***
-
+If the `validator.js` cannot properly validate the requirements, it may result in termination of application flow. The default file location for these requirements is set within `utils.js`, allowing you to update it if your requirements are stored in a different file.
 
 
 
@@ -155,24 +143,23 @@ The requirements will be read from the interactive CLI
 
 Once the input is read, it undergoes a validation process to determine its feasibility.
 
-If the requirements pass validation, the file reader module will retrieve the question store from the files defined in the dataLocator variable within utils.js (by default, the file used is data_locations.json).
+If the requirements pass validation, the file reader module will retrieve the question store from the files defined in the `dataLocator` variable within `utils.js` (by default, the file used is `data_locations.json`).
 
 ![Reading a single Question Store](images/file_reader.png )
 
 ![Reading a multiple Question Stores](images/file_reader_multiple.png )
 
 
-In case of successful file reading (in situations where multiple files are present and some might be unreadable, the process continues but returns a partial data read status, issuing a warning), the system proceeds to generate the question paper. The resulting paper is stored in the default output paper directory, also configurable within `utils.js`.
+In case of successful file reading (in situations where multiple files are present and some might be unreadable, the process continues but returns a `PARTIAL_DATA_READ` status, issuing a warning), the system proceeds to generate the question paper. The resulting paper is stored in the default output paper directory, also configurable within `utils.js`.
 
 ![Question paper written to a .json file](images/paper_written.png )
 
 If you execute this application multiple times, each generated paper will be stored with a distinct file name to prevent overwriting existing papers.
 
-***
-***
+
 
 ## Run tests
-As humans, we're prone to making mistakes even in the simplest of tasks. Therefore, a comprehensive set of tests has been created within the tests\ folder to simulate various successful and unsuccessful conditions in both the question generation process and input validation. These tests aim to demonstrate the behavior of the code under different scenarios. <br> To execute all tests, use the following command:
+A comprehensive set of tests has been created within the `tests\` folder to simulate various successful and unsuccessful conditions in both the question generation process and input validation. These tests aim to demonstrate the behavior of the code under different scenarios. <br> To execute all tests, use the following command:
 ```sh
 npm test
 ```
@@ -184,8 +171,7 @@ npm test -- <filename.test.js>
 ```
 <br>
 
-***
-***
+
 ## My Reflections
 This project was an incredible learning journey for me. I've always believed in learning through hands-on experiences, and this project was a perfect example.
 
@@ -204,8 +190,6 @@ This project was an incredible learning journey for me. I've always believed in 
 - **User-Defined Question Paper Names** : Including functionality for users to name question papers themselves would add a personal touch and enhance usability.
 <br>
 
-***
-***
 ## Author
 
 👤 **Ali Asgar Padaria**
