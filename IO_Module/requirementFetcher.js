@@ -29,11 +29,11 @@ const dataInputQuestions = [
  */  
 const CLIBasePrompts = [
     {
-      type: 'number',
+      type: 'input',
       name: 'marks',
       message: 'Enter the total marks:',
       validate: value => {
-        return value > 0 ? true : 'Please enter a valid positive number.';
+        return parseInt(value) > 0 ? true : 'Please enter a valid positive number.';
       }
     },
   
@@ -153,7 +153,7 @@ async function fetchFromCLI(){
     responseCode = await inquirer.prompt(CLIBasePrompts)
       .then(async answers => {
    
-        requirements.marks = answers.marks
+        requirements.marks = parseInt(answers.marks)
   
         condition = answers.criteriaForPaper
   

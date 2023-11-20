@@ -14,8 +14,8 @@ const utils = require("../utils")
  */
 function validateRequirements(requirements){
     
-    if(requirements.marks == undefined){
-        console.error("The requirements object does not contain 'marks'")
+    if(requirements.marks == undefined || Number.isInteger(requirements.marks) == false || requirements.marks <= 0){ 
+        console.error("The requirements object does not contain valid 'marks'")
         return utils.ResponseCodes.ERROR
     }
     totalMarks = requirements.marks
