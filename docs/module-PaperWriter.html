@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>QuestionManager - Documentation</title>
+    <title>PaperWriter - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">QuestionManager</h1>
+    <h1 class="page-title">PaperWriter</h1>
     
 
     
@@ -47,15 +47,6 @@
 
 <header>
     
-        <h2>
-        
-            QuestionManager
-        
-        </h2>
-        
-            <div class="class-description usertext">Manages operations related to questions.</div>
-        
-    
 </header>
 
 <article>
@@ -64,27 +55,16 @@
         
             
 
-    
-    <h2>Constructor</h2>
-    
-
-    <h4 class="name" id="QuestionManager"><span class="type-signature"></span>new QuestionManager<span class="signature">(questionStore)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
 <dl class="details">
     
     <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Constructs a QuestionManager instance.</li></ul></dd>
+    <dd class="tag-description"><ul class="dummy"><li>Module for managing and writing question papers to files.</li></ul></dd>
     
 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line5">line 5</a>
+        <a href="IO_Module_paperWriter.js.html">IO_Module/paperWriter.js</a>, <a href="IO_Module_paperWriter.js.html#line1">line 1</a>
     </li></ul></dd>
     
 
@@ -122,82 +102,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-parameters">Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
             
-                <td class="name"><code>questionStore</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-
-            
-            </td>
-
+                <div class="description usertext">Module for managing and writing question papers to files.</div>
             
 
             
-
-            <td class="description last">Array containing question objects.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
         </div>
     
@@ -224,7 +133,7 @@
 
     
 
-    <h4 class="name" id="getQuestionsByDifficulty"><span class="type-signature"></span>getQuestionsByDifficulty<span class="signature">(difficulty)</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span></h4>
+    <h4 class="name" id="~getNextFileName"><span class="type-signature type-signature-inner">(inner) </span>getNextFileName<span class="signature">(paperDir)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
@@ -234,13 +143,13 @@
 <dl class="details">
     
     <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Retrieves questions by difficulty level.</li></ul></dd>
+    <dd class="tag-description"><ul class="dummy"><li>Gets the next available file name in the directory to avoid overwriting existing files.</li></ul></dd>
     
 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line50">line 50</a>
+        <a href="IO_Module_paperWriter.js.html">IO_Module/paperWriter.js</a>, <a href="IO_Module_paperWriter.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -312,7 +221,7 @@
 
         <tr>
             
-                <td class="name"><code>difficulty</code></td>
+                <td class="name"><code>paperDir</code></td>
             
 
             <td class="type">
@@ -329,7 +238,7 @@
 
             
 
-            <td class="description last">Difficulty level ('Easy', 'Medium', 'Hard').</td>
+            <td class="description last">The directory where question papers are stored.</td>
         </tr>
 
     
@@ -355,7 +264,7 @@
 
         
 <div class="param-desc">
-    - Array of questions filtered by the specified difficulty.
+    - The next available file name for the question paper.
 </div>
 
 
@@ -366,7 +275,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Array.&lt;Object></span>
+<span class="param-type">string</span>
 
 
 
@@ -382,7 +291,7 @@
 
     
 
-    <h4 class="name" id="shuffle"><span class="type-signature"></span>shuffle<span class="signature">(questions)</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span></h4>
+    <h4 class="name" id="~writePaperToFile"><span class="type-signature type-signature-inner">(inner) </span>writePaperToFile<span class="signature">(questionPaper)</span><span class="type-signature"></span></h4>
 
     
 
@@ -392,13 +301,13 @@
 <dl class="details">
     
     <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Shuffles an array of questions. Uses Fisher-Yates shuffle algorithm</li></ul></dd>
+    <dd class="tag-description"><ul class="dummy"><li>Writes the generated question paper to a JSON file in the directory specified in 'utils.js'</li></ul></dd>
     
 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line28">line 28</a>
+        <a href="IO_Module_paperWriter.js.html">IO_Module/paperWriter.js</a>, <a href="IO_Module_paperWriter.js.html#line37">line 37</a>
     </li></ul></dd>
     
 
@@ -470,7 +379,7 @@
 
         <tr>
             
-                <td class="name"><code>questions</code></td>
+                <td class="name"><code>questionPaper</code></td>
             
 
             <td class="type">
@@ -487,7 +396,7 @@
 
             
 
-            <td class="description last">Array of questions to be shuffled.</td>
+            <td class="description last">The generated question paper to be written to the file.</td>
         </tr>
 
     
@@ -513,160 +422,12 @@
 
         
 <div class="param-desc">
-    - Shuffled array of questions.
+    response code indicating the status of the file writing operation (SUCCESS or ERROR).
 </div>
 
 
 
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array.&lt;Object></span>
-
-
-
-    </dd>
-</dl>
-
     
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateQuestionStore"><span class="type-signature"></span>updateQuestionStore<span class="signature">(newQuestionStore)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Updates the question store with a new set of questions.</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line19">line 19</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-parameters">Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>newQuestionStore</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">New set of questions.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

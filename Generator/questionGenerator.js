@@ -1,3 +1,8 @@
+/**
+ * @description Functions related to question paper generation and management.
+ * @module QuestionGenerator
+ */
+
 const QuestionManager = require("./questionManager");
 
 
@@ -6,7 +11,8 @@ const QuestionManager = require("./questionManager");
  * @param {Array<Object>} questions Array containing question objects.
  * @param {number} len Length of questions array 
  * @param {number} marks Total marks requirement to select questions
- * @returns {Object} Returns an object containing information about whether such a combination can be made and the combination array
+ * @returns {boolean} isPossible - is questions generation on following conditions possible 
+ * @returns {Array<Object>}  - array of questions if isPossible is true, else empty array []
  */
 function makeQuestions(questions,len,marks){
   //base case
@@ -35,7 +41,8 @@ function makeQuestions(questions,len,marks){
  * @description Generates a question paper based on the specified requirements and criteria.
  * @param {Array<Object>} questionStore Array containing question objects.
  * @param {Object} requirements Object containing the marks and criteria for generating the question paper.
- * @returns Object indicating whether the generation is possible and the generated question paper.
+ * @returns {boolean} isPossible - is questions generation on following conditions possible 
+ * @returns {Array<Object>}  - array of questions if isPossible is true, else empty array []
  */
 function generateQuestionPaper(questionStore, requirements){
 
@@ -85,4 +92,4 @@ function generateQuestionPaper(questionStore, requirements){
 
 
 module.exports.generateQuestionPaper = generateQuestionPaper
-module.exports.makeQuestions = makeQuestions
+module.exports.makeQuestions = makeQuestions // only for testing purposes, not used in driver

@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>QuestionManager - Documentation</title>
+    <title>QuestionGenerator - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">QuestionManager</h1>
+    <h1 class="page-title">QuestionGenerator</h1>
     
 
     
@@ -47,15 +47,6 @@
 
 <header>
     
-        <h2>
-        
-            QuestionManager
-        
-        </h2>
-        
-            <div class="class-description usertext">Manages operations related to questions.</div>
-        
-    
 </header>
 
 <article>
@@ -64,11 +55,85 @@
         
             
 
+<dl class="details">
     
-    <h2>Constructor</h2>
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Functions related to question paper generation and management.</li></ul></dd>
     
 
-    <h4 class="name" id="QuestionManager"><span class="type-signature"></span>new QuestionManager<span class="signature">(questionStore)</span><span class="type-signature"></span></h4>
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Generator_questionGenerator.js.html">Generator/questionGenerator.js</a>, <a href="Generator_questionGenerator.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+                <div class="description usertext">Functions related to question paper generation and management.</div>
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~generateQuestionPaper"><span class="type-signature type-signature-inner">(inner) </span>generateQuestionPaper<span class="signature">(questionStore, requirements)</span><span class="type-signature"> &rarr; {boolean|Array.&lt;Object>}</span></h4>
 
     
 
@@ -78,13 +143,13 @@
 <dl class="details">
     
     <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Constructs a QuestionManager instance.</li></ul></dd>
+    <dd class="tag-description"><ul class="dummy"><li>Generates a question paper based on the specified requirements and criteria.</li></ul></dd>
     
 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line5">line 5</a>
+        <a href="Generator_questionGenerator.js.html">Generator/questionGenerator.js</a>, <a href="Generator_questionGenerator.js.html#line47">line 47</a>
     </li></ul></dd>
     
 
@@ -177,148 +242,16 @@
         </tr>
 
     
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="getQuestionsByDifficulty"><span class="type-signature"></span>getQuestionsByDifficulty<span class="signature">(difficulty)</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Retrieves questions by difficulty level.</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line50">line 50</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-parameters">Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
 
         <tr>
             
-                <td class="name"><code>difficulty</code></td>
+                <td class="name"><code>requirements</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">Object</span>
 
 
 
@@ -329,7 +262,7 @@
 
             
 
-            <td class="description last">Difficulty level ('Easy', 'Medium', 'Hard').</td>
+            <td class="description last">Object containing the marks and criteria for generating the question paper.</td>
         </tr>
 
     
@@ -352,10 +285,31 @@
 
 
 <h5 class="h5-returns">Returns:</h5>
-
-        
+<ul>
+        <li>
 <div class="param-desc">
-    - Array of questions filtered by the specified difficulty.
+    isPossible - is questions generation on following conditions possible
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+</li>
+    
+        <li>
+<div class="param-desc">
+    - array of questions if isPossible is true, else empty array []
 </div>
 
 
@@ -372,8 +326,8 @@
 
     </dd>
 </dl>
-
-    
+</li>
+    </ul>
 
 
 
@@ -382,7 +336,7 @@
 
     
 
-    <h4 class="name" id="shuffle"><span class="type-signature"></span>shuffle<span class="signature">(questions)</span><span class="type-signature"> &rarr; {Array.&lt;Object>}</span></h4>
+    <h4 class="name" id="~makeQuestions"><span class="type-signature type-signature-inner">(inner) </span>makeQuestions<span class="signature">(questions, len, marks)</span><span class="type-signature"> &rarr; {boolean|Array.&lt;Object>}</span></h4>
 
     
 
@@ -392,13 +346,13 @@
 <dl class="details">
     
     <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Shuffles an array of questions. Uses Fisher-Yates shuffle algorithm</li></ul></dd>
+    <dd class="tag-description"><ul class="dummy"><li>Given a set of questions, this returns a subset of questions such that the sum of their marks is equal to the specified requirement</li></ul></dd>
     
 
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line28">line 28</a>
+        <a href="Generator_questionGenerator.js.html">Generator/questionGenerator.js</a>, <a href="Generator_questionGenerator.js.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -487,7 +441,55 @@
 
             
 
-            <td class="description last">Array of questions to be shuffled.</td>
+            <td class="description last">Array containing question objects.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>len</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Length of questions array</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>marks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Total marks requirement to select questions</td>
         </tr>
 
     
@@ -510,10 +512,31 @@
 
 
 <h5 class="h5-returns">Returns:</h5>
-
-        
+<ul>
+        <li>
 <div class="param-desc">
-    - Shuffled array of questions.
+    isPossible - is questions generation on following conditions possible
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+</li>
+    
+        <li>
+<div class="param-desc">
+    - array of questions if isPossible is true, else empty array []
 </div>
 
 
@@ -530,143 +553,8 @@
 
     </dd>
 </dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="updateQuestionStore"><span class="type-signature"></span>updateQuestionStore<span class="signature">(newQuestionStore)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-
-<dl class="details">
-    
-    <dt class="tag-description">Description:</dt>
-    <dd class="tag-description"><ul class="dummy"><li>Updates the question store with a new set of questions.</li></ul></dd>
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Generator_questionManager.js.html">Generator/questionManager.js</a>, <a href="Generator_questionManager.js.html#line19">line 19</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5 class="h5-parameters">Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>newQuestionStore</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">New set of questions.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</li>
+    </ul>
 
 
 

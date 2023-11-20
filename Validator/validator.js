@@ -1,3 +1,9 @@
+/**
+ * This Module deals with the functionality relating to validation of input 
+ * requirements received from the user for the task of Question Paper Generation 
+ * @module Validator
+ */
+
 const utils = require("../utils")
 
 
@@ -41,6 +47,7 @@ function validateRequirements(requirements){
 
     }
     if( criteriaFound ){
+       
         return utils.ResponseCodes.SUCCESS
     } else{
         console.error("The requirements object does not contain any valid criteria to make paper on")

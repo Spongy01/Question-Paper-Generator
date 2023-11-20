@@ -1,10 +1,10 @@
 { 
-    "marks": 100, 
+    "marks": 10, 
     "criteria": { 
         "difficulty": {
-            "easy" : 40,
-            "medium" : 40,
-            "hard" : 20
+            "Easy" : 40,
+            "Medium" : 30,
+            "Hard" : 30
         }
      } 
 

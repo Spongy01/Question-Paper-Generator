@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Validator/validator.js - Documentation</title>
+    <title>IO_Module/paperWriter.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Validator/validator.js</h1>
+    <h1 class="page-title">IO_Module/paperWriter.js</h1>
     
 
     
@@ -46,103 +46,71 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * This Module deals with the functionality relating to validation of input 
- * requirements received from the user for the task of Question Paper Generation 
- * @module Validator
+ * Module for managing and writing question papers to files.
+ * @module PaperWriter
  */
+
 
 const utils = require("../utils")
-
+const fs = require('fs');
+const path = require('path');
 
 /**
- * Validates the requirements object for generating question papers.
- * @param {Object} requirements - The object containing marks and criteria for generating the question paper.
- * @returns {number} Returns a response code indicating the validation status.
+ * Gets the next available file name in the directory to avoid overwriting existing files.
+ *
+ * @param {string} paperDir - The directory where question papers are stored.
+ * @returns {string} - The next available file name for the question paper.
  */
-function validateRequirements(requirements){
+function getNextFileName(paperDir) {
+    let index = 1;
+    let fileName;
+    do {
+      fileName = `questionPaper_${index}.json`;
+      const filePath = path.join(paperDir, fileName);
+      if (!fs.existsSync(filePath)) {
+        return fileName;
+      }
+      index++;
+    } while (true);
+  }
+
+/**
+ * Writes the generated question paper to a JSON file in the directory specified in 'utils.js'
+ * 
+ * @param {Array&lt;Object>} questionPaper The generated question paper to be written to the file.
+ * @returns response code indicating the status of the file writing operation (SUCCESS or ERROR).
+ */
+
+function writePaperToFile(questionPaper){
+    const directoryPath = utils.paperFolderDir
+
+
+    // Check if the directory exists; if not, create it
+    if (!fs.existsSync(directoryPath)) {
+        fs.mkdirSync(directoryPath);
+        console.log('Directory "Question Papers" created');
+      }
     
-    if(requirements.marks == undefined){
-        console.error("The requirements object does not contain 'marks'")
-        return utils.ResponseCodes.ERROR
-    }
-    totalMarks = requirements.marks
+    const paperJSON = JSON.stringify(questionPaper, null, 2)
+    const fileName = getNextFileName(directoryPath)
+    const filePath = path.join(directoryPath, fileName)
+    
+    try {
+        fs.writeFileSync(filePath, paperJSON, 'utf8');
+        utils.hr()
+        console.log('Paper has been successfully saved to', filePath);
 
-    if(requirements.criteria == undefined || JSON.stringify(requirements.criteria) === '{}'){
-        console.error("The requirements object does not contain any criteria to make paper on")
-        return utils.ResponseCodes.ERROR
-    }
-    requirementCriterias = requirements.criteria
-
-    criteriaFound = false
-
-    for (criteria in requirementCriterias){
-        if(criteria == 'difficulty'){
-            criteriaFound = true
-            sumValidation = difficultyValidationHelper(requirementCriterias[criteria])
-            if( sumValidation == false){
-                console.error("The fractions in Difficulty criteria don't add up to 100, which is NOT VALID.")
-                return utils.ResponseCodes.ERROR
-            }
-            fractionValidation = fractionValidationHelper(requirementCriterias[criteria], totalMarks)
-            if( fractionValidation == false){
-                console.error("The fractions in Difficulty lead to marks in decimal points, which is NOT VALID.")
-                return utils.ResponseCodes.ERROR
-            }
-        }
-        // can add more validations here
-        // ....
-
-    }
-    if( criteriaFound ){
-       
         return utils.ResponseCodes.SUCCESS
-    } else{
-        console.error("The requirements object does not contain any valid criteria to make paper on")
-        return utils.ResponseCodes.SUCCESS
+
+    } catch (err) {
+        utils.hr()
+        console.error('Error writing file:', err);
+        utils.ResponseCodes.ERROR
     }
 }
 
-/**
- * Helper function to validate the difficulty criteria in the requirements.
- * @param {Object} difficulty the difficutly criteria object
- * @returns {boolean} Returns true if the difficulty criteria is validated; otherwise, false.
- */
-function difficultyValidationHelper(difficulty){
-    let sum =  0
-    for (const fraction in difficulty){
-      
-        sum += difficulty[fraction]
-    }
-    if(sum == 100){
-        return true
-    }
-    return false
-}
 
-/**
- * Helper function to validate the fractions of the criteria against total marks.
- * @param {Object} criteria - The criteria object.
- * @param {number} marks - The total marks available.
- * @returns {boolean} Returns true if the fractions are valid against total marks; otherwise, false.
- */
-function fractionValidationHelper(criteria, marks){
-    isValid = true
-    for (const fraction in criteria){
-       
-        // this gives the fractional marks of a component in any criteria. Ex, 30% of 50 , fractionalMarks = 15        
-        fractionalMarks = (criteria[fraction]*marks)/100
-        if(! Number.isInteger(fractionalMarks)){ 
-            // if any component requires marks in fraction like 3.33, then the given requirement is not valid.
-            isValid = false
-            return isValid
-        }
-    }
-    return isValid
-}
-
-
-
-module.exports.validateRequirements = validateRequirements</code></pre>
+module.exports.writePaperToFile = writePaperToFile</code></pre>
         </article>
     </section>
 

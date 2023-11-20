@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "generate-docs": "jsdoc -c ./jsdoc.config.json"
+    "generate-docs": "jsdoc -c ./jsdoc.config.json",
+    "start": "node app.js"
   },
   "author": "Ali Asgar Padaria",
   "license": "ISC",

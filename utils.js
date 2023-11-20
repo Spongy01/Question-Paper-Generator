@@ -1,3 +1,8 @@
+/**
+ * Module representing utility functions and constants used in the question paper generation process.
+ * @module Utils
+ */
+
 const path = require("node:path")
 
 // Change here if any changes to file systems.
@@ -38,6 +43,20 @@ const requirementsFile = "questionRequirements.json"
  */
 const dataDir = path.join(baseDir, dataFolder)
 
+
+/**
+ * The name of the folder where papers are stored.
+ * Relative path from 'baseDir'
+ * @constant {string}
+ */
+const paperFolder = "Question Papers"
+
+/**
+ * The absolute path to the directory where generated question papers will be written.
+ * @constant {string}
+ */
+const paperFolderDir = path.join(baseDir, paperFolder)
+
 /**
  * Constants holding codes for data reading.
  * @readonly
@@ -67,11 +86,31 @@ const ResponseCodes = {
 }
 
 
+/**
+ * @description Adds a horizontal line with optional text in the center.
+ * @param {string} text - Optional text to display at the center of the horizontal line.
+ */
+function hr(text) {
+    if (!text) {
+      console.log('----------------------------------------------');
+    } else {
+      const paddedText = `    ${text}    `;
+      const remainingLength = 46 - paddedText.length;
+      const numOfDashes = Math.floor(remainingLength / 2);
+      const dashes = '-'.repeat(numOfDashes);
+      const separator = `${dashes}${paddedText}${dashes}`;
+      console.log(separator);
+    }
+  }
+
+
 module.exports.baseDir = baseDir
 module.exports.dataDir = dataDir
+module.exports.paperFolderDir = paperFolderDir
 module.exports.dataLocator = dataLocator
 module.exports.requirementsFile = requirementsFile
 
 module.exports.DataReadCodes = DataReadCodes
 module.exports.ResponseCodes = ResponseCodes 
+module.exports.hr = hr
 

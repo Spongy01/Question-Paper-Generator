@@ -1,3 +1,8 @@
+/**
+ * Functions related to fetching requirements for generating question papers.
+ * @module RequirementFetcher
+ */
+
 const fs = require("node:fs")
 const path = require("node:path")
 const utils = require("../utils")
@@ -14,7 +19,7 @@ const dataInputQuestions = [
       type: 'list',
       name: 'dataInputFormat',
       message: 'From where should we take criteria for generation?:',
-      choices: ["Predefined JSON file", "Interactive CLI"]
+      choices: ['Predefined JSON file [ at: ' + utils.requirementsFile +" ]" , "Interactive CLI"]
     }
   ];
 
@@ -89,11 +94,13 @@ const FileBasePrompt = [
 
 /**
  * Fetches requirements from a predefined JSON file defined in 'utils.js' .
- * @returns {Object} Object containing response code and fetched requirements.
+ * @returns {number} code - containing response code 
+ * @returns {Array<Object>} requirements - requirements object to generate paper on
  */
 async function fetchFromFile(){
     requirementsPath = path.join(utils.baseDir, utils.requirementsFile)
-    console.log("The default file location from which data will be fetched : ", requirementsPath)
+    console.log()
+    console.log("The default file location from which data will be fetched : baseDir/",utils.requirementsFile )
     console.log("You can change the file location from the 'utils.js'")
 
 
@@ -102,15 +109,18 @@ async function fetchFromFile(){
             return response
         })
         .catch(error => {
+            console.log()
             console.error('Error:', error);
             return "error"
           });
     
-    console.log("confirmation : ", confirmation)
 
     if(confirmation.confirmation == false || confirmation.confirmation == "error" ){
         // terminate
-        console.log("Terminating ...");
+        console.log()
+        console.log("You can change the default file in utils.js ...")
+        console.log("Terminating this instance ...");
+        console.log()
         return {code: utils.ResponseCodes.TERMINATE, requirements : {}}
     }
 
@@ -118,11 +128,12 @@ async function fetchFromFile(){
 
         reqFileRaw = fs.readFileSync(requirementsPath, "utf-8")
         reqFileUsable = JSON.parse(reqFileRaw)
-        console.log("--File Read Successfully--")
+        console.log()
+        utils.hr("Requirements File Read Successfully")
         return {code: utils.ResponseCodes.SUCCESS, requirements : reqFileUsable}
 
     }catch(fileError){
-
+        console.log()
         console.error("Caught Error while Reading Requirements File : ", fileError)
         return {code: utils.ResponseCodes.ERROR, requirements : {}}
 
@@ -132,7 +143,8 @@ async function fetchFromFile(){
 
 /**
  * Fetches requirements via CLI-based interactive prompts.
- * @returns {Object} Object containing response code and fetched requirements.
+ * @returns {number} code - containing response code 
+ * @returns {Array<Object>} requirements - requirements object to generate paper on
  */
 async function fetchFromCLI(){
 
@@ -152,9 +164,9 @@ async function fetchFromCLI(){
               criteria  = {}
               difficulty = {}
   
-              difficulty.easy =  difficultyAnswers.easy
-              difficulty.medium =  difficultyAnswers.medium
-              difficulty.hard =  difficultyAnswers.hard
+              difficulty.Easy =  difficultyAnswers.easy
+              difficulty.Medium =  difficultyAnswers.medium
+              difficulty.Hard =  difficultyAnswers.hard
 
               criteria = {difficulty: difficulty}
               requirements.criteria = criteria
@@ -188,7 +200,8 @@ async function fetchFromCLI(){
 
 /**
  * Fetches requirements based on user-selected input method.
- * @returns {Object} Object containing response code and fetched requirements.
+ * @returns {number} code - containing response code 
+ * @returns {Array<Object>} requirements - requirements object to generate paper on
  */
 async function fetchRequirements(){
 
@@ -203,14 +216,14 @@ async function fetchRequirements(){
                 return response
 
             }
-            else if (inputFrom == 'Predefined JSON file'){
+            else if (inputFrom == 'Predefined JSON file [ at: ' + utils.requirementsFile +" ]" ){
                 response = await fetchFromFile();
                 return response
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            return {code: "error", requirements : {}}
+            return {code: utils.ResponseCodes.ERROR, requirements : {}}
             
           });
 

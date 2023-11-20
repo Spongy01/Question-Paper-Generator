@@ -29,7 +29,7 @@
 <nav >
     
     
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="QuestionManager.html">QuestionManager</a><ul class='methods'><li data-type='method'><a href="QuestionManager.html#getQuestionsByDifficulty">getQuestionsByDifficulty</a></li><li data-type='method'><a href="QuestionManager.html#shuffle">shuffle</a></li><li data-type='method'><a href="QuestionManager.html#updateQuestionStore">updateQuestionStore</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#CLIBasePrompts">CLIBasePrompts</a></li><li><a href="global.html#CLIDifficultyPrompts">CLIDifficultyPrompts</a></li><li><a href="global.html#DataReadCodes">DataReadCodes</a></li><li><a href="global.html#FileBasePrompt">FileBasePrompt</a></li><li><a href="global.html#ResponseCodes">ResponseCodes</a></li><li><a href="global.html#baseDir">baseDir</a></li><li><a href="global.html#dataDir">dataDir</a></li><li><a href="global.html#dataFolder">dataFolder</a></li><li><a href="global.html#dataInputQuestions">dataInputQuestions</a></li><li><a href="global.html#dataLocator">dataLocator</a></li><li><a href="global.html#difficultyValidationHelper">difficultyValidationHelper</a></li><li><a href="global.html#fetchFromCLI">fetchFromCLI</a></li><li><a href="global.html#fetchFromFile">fetchFromFile</a></li><li><a href="global.html#fetchRequirements">fetchRequirements</a></li><li><a href="global.html#fractionValidationHelper">fractionValidationHelper</a></li><li><a href="global.html#generateQuestionPaper">generateQuestionPaper</a></li><li><a href="global.html#makeQuestions">makeQuestions</a></li><li><a href="global.html#read_questions">read_questions</a></li><li><a href="global.html#requirementsFile">requirementsFile</a></li><li><a href="global.html#validateRequirements">validateRequirements</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="QuestionManager.html">QuestionManager</a><ul class='methods'><li data-type='method'><a href="QuestionManager.html#getQuestionsByDifficulty">getQuestionsByDifficulty</a></li><li data-type='method'><a href="QuestionManager.html#shuffle">shuffle</a></li><li data-type='method'><a href="QuestionManager.html#updateQuestionStore">updateQuestionStore</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-FileReader.html">FileReader</a><ul class='methods'><li data-type='method'><a href="module-FileReader.html#~read_questions">read_questions</a></li></ul></li><li><a href="module-PaperWriter.html">PaperWriter</a><ul class='methods'><li data-type='method'><a href="module-PaperWriter.html#~getNextFileName">getNextFileName</a></li><li data-type='method'><a href="module-PaperWriter.html#~writePaperToFile">writePaperToFile</a></li></ul></li><li><a href="module-QuestionGenerator.html">QuestionGenerator</a><ul class='methods'><li data-type='method'><a href="module-QuestionGenerator.html#~generateQuestionPaper">generateQuestionPaper</a></li><li data-type='method'><a href="module-QuestionGenerator.html#~makeQuestions">makeQuestions</a></li></ul></li><li><a href="module-QuestionPaperGenerator.html">QuestionPaperGenerator</a><ul class='methods'><li data-type='method'><a href="module-QuestionPaperGenerator.html#~driver">driver</a></li></ul></li><li><a href="module-RequirementFetcher.html">RequirementFetcher</a><ul class='methods'><li data-type='method'><a href="module-RequirementFetcher.html#~fetchFromCLI">fetchFromCLI</a></li><li data-type='method'><a href="module-RequirementFetcher.html#~fetchFromFile">fetchFromFile</a></li><li data-type='method'><a href="module-RequirementFetcher.html#~fetchRequirements">fetchRequirements</a></li></ul></li><li><a href="module-Utils.html">Utils</a><ul class='methods'><li data-type='method'><a href="module-Utils.html#~hr">hr</a></li></ul></li><li><a href="module-Validator.html">Validator</a><ul class='methods'><li data-type='method'><a href="module-Validator.html#~difficultyValidationHelper">difficultyValidationHelper</a></li><li data-type='method'><a href="module-Validator.html#~fractionValidationHelper">fractionValidationHelper</a></li><li data-type='method'><a href="module-Validator.html#~validateRequirements">validateRequirements</a></li></ul></li></ul>
     
 </nav>
 
@@ -45,19 +45,28 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const fs = require("node:fs")
+            <pre class="prettyprint source linenums"><code>/**
+ * Module to read question data from files specified in 'data_locator.js'.
+ * @module FileReader
+ */
+
+
+const fs = require("node:fs")
 const path = require("node:path")
 const utils = require("../utils")
 
-console.log("------------------------------------------")
+utils.hr()
+console.log()
+utils.hr("INFO");
 console.log("Current Dir for File Reader Module: ",__dirname)
 console.log("Utils : ", utils)
-console.log("------------------------------------------")
+utils.hr()
 
 
 /**
  * @description This function reads the question data from the files specified in 'data_locator.js'
- * @returns { number,Array } An object containing return code and question data. 
+ * @returns {number} code - Return code representing the data reading status.
+ * @returns {Array} data - Array containing the fetched question data.
  */
 
 function read_questions(){
@@ -105,6 +114,10 @@ function read_questions(){
         return {code: utils.DataReadCodes.NO_DATA_READ, data : totalQuestionData}
     }
 
+    if(JSON.stringify(totalQuestionData) === '[]'){
+        return {code: utils.DataReadCodes.NO_DATA_READ, data : totalQuestionData}
+    }   
+
     return {code: responseCode, data : totalQuestionData}
 
 }
@@ -124,7 +137,7 @@ module.exports = read_questions</code></pre>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Sun Nov 19 2023 23:16:46 GMT+0530 (India Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Mon Nov 20 2023 12:46:44 GMT+0530 (India Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

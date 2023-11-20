@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Validator/validator.js - Documentation</title>
+    <title>app.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,7 +35,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Validator/validator.js</h1>
+    <h1 class="page-title">app.js</h1>
     
 
     
@@ -46,103 +46,124 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * This Module deals with the functionality relating to validation of input 
- * requirements received from the user for the task of Question Paper Generation 
- * @module Validator
+ * Driver Module representing the Question Paper Generation Process.
+ * @module QuestionPaperGenerator
  */
 
-const utils = require("../utils")
+const utils = require("./utils")
+
+utils.hr()
+utils.hr("QUESTION PAPER GENERATOR")
+
+
+const { fetchRequirements } = require("./IO_Module/requirementFetcher");
+const { validateRequirements } = require("./Validator/validator");
+const { generateQuestionPaper } = require("./Generator/questionGenerator");
+const reader = require("./IO_Module/file_reader");
+const { writePaperToFile } = require("./IO_Module/paperWriter");
 
 
 /**
- * Validates the requirements object for generating question papers.
- * @param {Object} requirements - The object containing marks and criteria for generating the question paper.
- * @returns {number} Returns a response code indicating the validation status.
+ * @description Runs the question paper generation process based on provided requirements and data.
+ * Fetches requirements, validates them, reads data, generates the question paper, 
+ * and writes it to a file if successful.
+ * @async
  */
-function validateRequirements(requirements){
+async function driver(){
     
-    if(requirements.marks == undefined){
-        console.error("The requirements object does not contain 'marks'")
-        return utils.ResponseCodes.ERROR
+    // Fetch requirements from the user
+    let response = await fetchRequirements()    
+    
+    // Check if requirements fetch was successful
+    if(response.code != utils.ResponseCodes.SUCCESS){
+        console.error("Shutting Down Program");
+        return 
     }
-    totalMarks = requirements.marks
 
-    if(requirements.criteria == undefined || JSON.stringify(requirements.criteria) === '{}'){
-        console.error("The requirements object does not contain any criteria to make paper on")
-        return utils.ResponseCodes.ERROR
+    console.log()
+    console.log("Requirements :")
+    console.log(response.requirements);
+    console.log()
+
+    let requirements = response.requirements
+
+    utils.hr("Validating the Requirements");
+    console.log('....')
+
+    // Validate the fetched requirements
+    response =  validateRequirements(requirements)
+    
+    // Check if requirements validation was successful
+    if(response != utils.ResponseCodes.SUCCESS){
+        console.log()
+        console.error("Shutting Down Program");
+        utils.hr()
+        return 
     }
-    requirementCriterias = requirements.criteria
+    utils.hr("Requirements Validated")
+    console.log()
 
-    criteriaFound = false
+    // Read questions required for question paper generation
+    response = reader()
+    code = response.code 
+    data = response.data
 
-    for (criteria in requirementCriterias){
-        if(criteria == 'difficulty'){
-            criteriaFound = true
-            sumValidation = difficultyValidationHelper(requirementCriterias[criteria])
-            if( sumValidation == false){
-                console.error("The fractions in Difficulty criteria don't add up to 100, which is NOT VALID.")
-                return utils.ResponseCodes.ERROR
-            }
-            fractionValidation = fractionValidationHelper(requirementCriterias[criteria], totalMarks)
-            if( fractionValidation == false){
-                console.error("The fractions in Difficulty lead to marks in decimal points, which is NOT VALID.")
-                return utils.ResponseCodes.ERROR
-            }
-        }
-        // can add more validations here
-        // ....
+    // Check if data reading was successful
+    if(code == utils.DataReadCodes.NO_DATA_READ){
+        utils.hr()
+        console.log("WARN:")
+        utils.hr()
+        console.error("No Data Could be Read");
+        console.log()
+        console.error("Shutting Down Program");
+        utils.hr()
+        return
+    }
+
+    if(code == utils.DataReadCodes.PARTIAL_DATA_READ){
+        // if multiple files are present and not all were read, display partial message
+        console.warn("WARN: only Partial Data was read.")
+    }
+
+    console.log("No of Questions Read : ", data.length)
+
+    // Check if paper generation was possible 
+    response = generateQuestionPaper(data, requirements)
+
+    if( response.isPossible == false ){
+        utils.hr()
+        console.log("WARN:")
+        utils.hr()
+        console.log("Paper could Not be Generated with this criteria")
+        console.log()
+        console.error("Shutting Down Program");
+        utils.hr()
+        return
+    }
+    
+    utils.hr("Paper Generation Successful")
+    console.log();
+
+    // Write the generated question paper to a file
+    response = writePaperToFile(response.questionPaper)
+
+    // Check if writing the paper to file was successful
+    if(response == utils.ResponseCodes.ERROR){
+        console.log()
+        console.log("WARN: ")
+        console.log("Paper could not be written to a File")
+        
 
     }
-    if( criteriaFound ){
-       
-        return utils.ResponseCodes.SUCCESS
-    } else{
-        console.error("The requirements object does not contain any valid criteria to make paper on")
-        return utils.ResponseCodes.SUCCESS
-    }
+
+    console.log()
+    console.error("Shutting Down Program");
+    utils.hr()
+
 }
 
-/**
- * Helper function to validate the difficulty criteria in the requirements.
- * @param {Object} difficulty the difficutly criteria object
- * @returns {boolean} Returns true if the difficulty criteria is validated; otherwise, false.
- */
-function difficultyValidationHelper(difficulty){
-    let sum =  0
-    for (const fraction in difficulty){
-      
-        sum += difficulty[fraction]
-    }
-    if(sum == 100){
-        return true
-    }
-    return false
-}
 
-/**
- * Helper function to validate the fractions of the criteria against total marks.
- * @param {Object} criteria - The criteria object.
- * @param {number} marks - The total marks available.
- * @returns {boolean} Returns true if the fractions are valid against total marks; otherwise, false.
- */
-function fractionValidationHelper(criteria, marks){
-    isValid = true
-    for (const fraction in criteria){
-       
-        // this gives the fractional marks of a component in any criteria. Ex, 30% of 50 , fractionalMarks = 15        
-        fractionalMarks = (criteria[fraction]*marks)/100
-        if(! Number.isInteger(fractionalMarks)){ 
-            // if any component requires marks in fraction like 3.33, then the given requirement is not valid.
-            isValid = false
-            return isValid
-        }
-    }
-    return isValid
-}
-
-
-
-module.exports.validateRequirements = validateRequirements</code></pre>
+driver();</code></pre>
         </article>
     </section>
 

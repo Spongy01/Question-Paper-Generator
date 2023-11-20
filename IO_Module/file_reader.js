@@ -1,16 +1,25 @@
+/**
+ * Module to read question data from files specified in 'data_locator.js'.
+ * @module FileReader
+ */
+
+
 const fs = require("node:fs")
 const path = require("node:path")
 const utils = require("../utils")
 
-console.log("------------------------------------------")
+utils.hr()
+console.log()
+utils.hr("INFO");
 console.log("Current Dir for File Reader Module: ",__dirname)
 console.log("Utils : ", utils)
-console.log("------------------------------------------")
+utils.hr()
 
 
 /**
  * @description This function reads the question data from the files specified in 'data_locator.js'
- * @returns { number,Array } An object containing return code and question data. 
+ * @returns {number} code - Return code representing the data reading status.
+ * @returns {Array} data - Array containing the fetched question data.
  */
 
 function read_questions(){
@@ -57,6 +66,10 @@ function read_questions(){
         // return with response code : No data read, and an empty array of questions
         return {code: utils.DataReadCodes.NO_DATA_READ, data : totalQuestionData}
     }
+
+    if(JSON.stringify(totalQuestionData) === '[]'){
+        return {code: utils.DataReadCodes.NO_DATA_READ, data : totalQuestionData}
+    }   
 
     return {code: responseCode, data : totalQuestionData}
 
