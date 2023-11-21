@@ -12,7 +12,7 @@ utils.hr("QUESTION PAPER GENERATOR")
 const { fetchRequirements } = require("./IO_Module/requirementFetcher");
 const { validateRequirements } = require("./Validator/validator");
 const { generateQuestionPaper } = require("./Generator/questionGenerator");
-const reader = require("./IO_Module/file_reader");
+const reader = require("./IO_Module/fileReader");
 const { writePaperToFile } = require("./IO_Module/paperWriter");
 
 
