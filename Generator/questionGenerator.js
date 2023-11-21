@@ -15,25 +15,36 @@ const QuestionManager = require("./questionManager");
  * @returns {Array<Object>}  - array of questions if isPossible is true, else empty array []
  */
 function makeQuestions(questions,len,marks){
-  //base case
-  if (marks == 0){
-      return {isPossible: true, subset : []}
-  }
-  if( len==0 && marks !=0){
-      return { isPossible: false, subset: [] };
+  // Initialize dp array with null 
+  const dp = new Array(len + 1).fill(null).map(() => new Array(marks + 1).fill(null));
+
+  // Base case initialization
+  for (let i = 0; i <= len; i++) {
+    dp[i][0] = [];
   }
 
-  // if cant add last element, directy ignore it
-  if (questions[len-1].marks > marks) {
-      return makeQuestions(questions,len-1,marks);
+  // filling the dp array
+  for (let i = 1; i <= len; i++) {
+    for (let j = 1; j <= marks; j++) {
+      if (j < questions[i - 1].marks) {
+        dp[i][j] = dp[i - 1][j];
+      } else {
+        if (dp[i - 1][j] !== null) {
+          dp[i][j] = dp[i - 1][j];
+        } else if (dp[i - 1][j - questions[i - 1].marks] !== null) {
+          dp[i][j] = [...dp[i - 1][j - questions[i - 1].marks], i - 1];
+        }
+      }
+    }
   }
-
-  let include = makeQuestions(questions, len - 1, marks - questions[len - 1].marks);
-  if (include.isPossible) {
-      return { isPossible: true, subset: include.subset.concat(questions[len - 1]) };
-  } else {
-      return makeQuestions(questions,len-1,marks);
+  isPossible = dp[len][marks] == null ? false : true
+  subsetQuestions = []
+  if(isPossible){
+    indices = dp[len][marks]
+    subsetQuestions = indices.map(index => questions[index])
   }
+  // console.log(dp)
+  return {isPossible:isPossible , subset:subsetQuestions}
 }
 
 
