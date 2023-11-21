@@ -11,8 +11,8 @@
 > This project, part of Reelo's backend internship evaluation, creates a Question Paper Generator. It takes the total marks and difficulty distribution as input to generate a custom question paper.
 
 
-## Pre-requisite
-Node.js is required for this project.
+### Prerequisites
+- **Node.js:** Node.js must be installed. You can download it from [Node.js website](https://nodejs.org/).
 
 
 ## Install
