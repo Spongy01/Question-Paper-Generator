@@ -8,7 +8,7 @@
 </p>
 
 
-> This project, part of Reelo's backend internship evaluation, creates a Question Paper Generator. It takes the total marks and difficulty distribution as input to generate a custom question paper.
+> This project is a Question Paper Generator. It takes the total marks and difficulty distribution as input to generate a custom question paper.
 
 
 ### Prerequisites
